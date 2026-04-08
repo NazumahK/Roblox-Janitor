@@ -16,7 +16,7 @@ Add to your `wally.toml`:
 
 ```toml
 [dependencies]
-Janitor = "nazumahk/janitor@1.0.0"
+Janitor = "nazumahk/janitor@1.0.1"
 ```
 
 ## Quick Start
