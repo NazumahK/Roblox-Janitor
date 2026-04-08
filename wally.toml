@@ -8,3 +8,4 @@ realm = "shared"
 include = ["src", "default.project.json", "LICENSE"]
 
 [dependencies]
+Vow = "nazumahk/vow@^1"
