@@ -362,7 +362,7 @@ local function Cleanup(self: Private): ()
 	local object, methodName = next(self)
 	while object and methodName do
 		CleanupObject(object, methodName, suppressReDestroy, unsafeThread)
-		self[object] = nil
+		self[object :: any] = nil
 		object, methodName = next(self, object)
 	end
 
@@ -398,8 +398,7 @@ local function LinkToInstance(self: Private, object: Instance, allowMultiple: bo
 	)
 end
 
-Private.LinkToInstance = LinkToInstance;
-(Janitor :: never).LegacyLinkToInstance = LinkToInstance
+Private.LinkToInstance = LinkToInstance
 
 function Janitor:LinkToInstances(...: Instance): Janitor
 	local manualCleanup = Janitor.new()
