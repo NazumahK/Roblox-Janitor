@@ -256,7 +256,7 @@ end
 Janitor.Get = Get
 
 function Janitor:AddVow<T>(vowObject: Vow<T>, index: unknown?): Vow<T>
-	local VowLib: VowAPI = Vow :: VowAPI?
+	local VowLib: VowAPI? = Vow :: VowAPI?
 	if not VowLib then
 		return vowObject
 	end
